@@ -1,0 +1,19 @@
+<!--
+  ~ Copyright (c) 2015-present, Parse, LLC.
+  ~ All rights reserved.
+  ~
+  ~ This source code is licensed under the BSD-style license found in the
+  ~ LICENSE file in the root directory of this source tree. An additional grant
+  ~ of patent rights can be found in the PATENTS file in the same directory.
+  -->
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#25D366</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:itemBackground">#FFFFFF</item>
+        <item name="android:colorPrimaryDark">#17b753</item>
+    </style>
+
+</resources>

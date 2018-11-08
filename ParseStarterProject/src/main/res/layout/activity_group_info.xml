@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall"
+    tools:context="com.parse.starter.groupInfoActivity">
+
+    <include
+        android:id="@+id/group_info_page_toolbar"
+        layout="@layout/toolbar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/group_info_page_toolbar"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/groupImage"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/default_image" />
+
+            <TextView
+                android:id="@+id/groupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupImage"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:text="User Name"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/groupStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/groupName"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Status"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/changeGroupImage"
+                android:layout_width="48dp"
+                android:layout_height="57dp"
+                android:layout_alignBottom="@+id/groupImage"
+                android:layout_alignEnd="@+id/groupImage"
+                android:onClick="changeImage"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            <ImageView
+                android:id="@+id/changeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/groupName"
+                android:layout_marginEnd="16dp"
+                android:onClick="changeName"
+                app:srcCompat="@android:drawable/ic_menu_edit" />
+
+            <ImageView
+                android:id="@+id/changeStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/groupStatus"
+                android:layout_alignStart="@+id/changeName"
+                android:onClick="changeStatus"
+                app:srcCompat="@android:drawable/ic_menu_edit" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Members of Group"
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/groupMembers"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/textView2"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/exitGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupMembers"
+                android:layout_centerInParent="true"
+                android:onClick="exitGrp"
+                android:layout_margin="10dp"
+                android:background="@android:color/holo_red_light"
+                android:text="Exit Group"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
